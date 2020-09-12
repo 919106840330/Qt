@@ -32,7 +32,7 @@ fxq::fxq(QWidget *parent) : QWidget(parent)
       }
       for (i=0;i<52;i++){
           for(j=0;j<4;j++){
-              qp[i][j]=0;
+              qp[i][j]=1;
           }
       }
       b.setParent(this);
@@ -135,235 +135,232 @@ void::fxq::paintEvent(QPaintEvent *){
                 }
             }}
     }
-    for(i=0;i<52;i++){    //棋盘
-        for(j=0;j<4;j++){
-            if(qp[i][j]){
-                if(i==0){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(420,0,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(420,0,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(420,0,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(420,0,50,50,QPixmap("../green"));
-                        break;
+
+    for(i=0;i<52;i++){
+            for(j=0;j<4;j++){
+                if(qp[i][j]){
+                    if(i==0){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(400,10,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(400,10,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(400,10,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(400,10,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>0&&i<=3){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(420,30*i+10,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(420,30*i+10,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(420,30*i+10,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(420,30*i+10,50,50,QPixmap("../green"));
-                        break;
+                    if(i>0&&i<=3){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(400,30*i+40,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(400,30*i+40,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(400,30*i+40,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(400,30*i+40,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>3&&i<=7){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(420+(i-3)*30,160,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(420+(i-3)*30,160,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(420+(i-3)*30,160,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(420+(i-3)*30,160,50,50,QPixmap("../green"));
-                        break;
+                    if(i>3&&i<=7){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(420+(i-3)*25,150,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(420+(i-3)*25,150,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(420+(i-3)*25,150,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(420+(i-3)*25,150,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>7&&i<=12){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(640,160+(i-3)*30,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(640,160+(i-3)*30,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(640,160+(i-3)*30,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(640,160+(i-3)*30,50,50,QPixmap("../green"));
-                        break;
+                    if(i>7&&i<=12){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(535,160+(i-6)*30,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(535,160+(i-6)*30,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(535,160+(i-6)*30,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(535,160+(i-6)*30,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>12&&i<=16){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(640-30*(i-13),460,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(640-30*(i-13),460,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(640-30*(i-13),460,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(640-30*(i-13),460,50,50,QPixmap("../green"));
-                        break;
+                    if(i>12&&i<=16){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(540-25*(i-12),400,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(540-25*(i-12),400,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(540-25*(i-12),400,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(540-25*(i-12),400,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>17&&i<=20){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(460,460+(i-17)*30,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(460,460+(i-17)*30,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(460,460+(i-17)*30,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(460,460+(i-17)*30,50,50,QPixmap("../green"));
-                        break;
+                    if(i>=17&&i<=20){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(400,400+(i-16)*30,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(400,400+(i-16)*30,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(400,400+(i-16)*30,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(400,400+(i-16)*30,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>20&&i<=25){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(460-(i-20)*30,570,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(460-(i-20)*30,570,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(460-(i-20)*30,570,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(460-(i-20)*30,570,50,50,QPixmap("../green"));
-                        break;
+                    if(i>20&&i<=25){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(400-(i-19)*30,540,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(400-(i-19)*30,540,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(400-(i-19)*30,540,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(400-(i-19)*30,540,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>25&&i<=29){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(140,570-(i-26)*30,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(140,570-(i-26)*30,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(140,570-(i-26)*30,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(140,570-(i-26)*30,50,50,QPixmap("../green"));
-                        break;
+                    if(i>25&&i<=29){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(150,540-(i-25)*25,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(150,540-(i-25)*25,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(150,540-(i-25)*25,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(150,540-(i-25)*25,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>29&&i<=33){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(140-30*(i-30),430,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(140-30*(i-30),430,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(140-30*(i-30),430,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(140-30*(i-30),430,50,50,QPixmap("../green"));
-                        break;
+                    if(i>29&&i<=33){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(150-30*(i-29),400,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(150-30*(i-29),430,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(150-30*(i-29),430,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(150-30*(i-29),430,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>33&&i<=38){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(20,370-30*(i-34),50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(20,370-30*(i-34),50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(20,370-30*(i-34),50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(20,370-30*(i-34),50,50,QPixmap("../green"));
-                        break;
+                    if(i>33&&i<=38){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(16,370-30*(i-33),50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(16,370-30*(i-33),50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(16,370-30*(i-33),50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(16,370-30*(i-33),50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>38&&i<=42){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(20+30*(i-39),150,50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(20+30*(i-39),150,50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(20+30*(i-39),150,50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(20+30*(i-39),150,50,50,QPixmap("../green"));
-                        break;
+                    if(i>38&&i<=42){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(10+25*(i-38),150,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(10+25*(i-38),150,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(10+25*(i-38),150,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(10+25*(i-38),150,50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>42&&i<=46){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(170,150-30*(i-43),50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(170,150-30*(i-43),50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(170,150-30*(i-43),50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(170,150-30*(i-43),50,50,QPixmap("../green"));
-                        break;
+                    if(i>42&&i<=46){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(155,150-30*(i-42),50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(155,150-30*(i-42),50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(155,150-30*(i-42),50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(155,150-30*(i-42),50,50,QPixmap("../green"));
+                            break;
+                        }
                     }
-                }
-                if(i>47&&i<=51){
-                    switch(qp[i][j]){
-                    case 1:
-                        p.drawPixmap(210+30*(i-48),150-30*(i-43),50,50,QPixmap("../red"));
-                        break;
-                    case 2:
-                        p.drawPixmap(210+30*(i-48),150-30*(i-43),50,50,QPixmap("../blue"));
-                        break;
-                    case 3:
-                        p.drawPixmap(210+30*(i-48),150-30*(i-43),50,50,QPixmap("../yellow"));
-                        break;
-                    case 4:
-                        p.drawPixmap(210+30*(i-48),150-30*(i-43),50,50,QPixmap("../green"));
-                        break;
-                    }
-                }
-            }
-        }
-    }
+                    if(i>46&&i<=51){
+                        switch(qp[i][j]){
+                        case 1:
+                            p.drawPixmap(170+28*(i-45),10,50,50,QPixmap("../red"));
+                            break;
+                        case 2:
+                            p.drawPixmap(170+28*(i-45),10,50,50,QPixmap("../blue"));
+                            break;
+                        case 3:
+                            p.drawPixmap(170+28*(i-45),10,50,50,QPixmap("../yellow"));
+                            break;
+                        case 4:
+                            p.drawPixmap(170+28*(i-45),10,50,50,QPixmap("../green"));
+                            break;
+                        }}}}}
     for(i=0;i<4;i++){
         if(i==0){
             for(j=0;j<6;j++){
                 switch(win[i][j]){
                     case 1:
-                    p.drawPixmap(300,70+30*j,50,50,QPixmap("../red"));
+                    p.drawPixmap(275,65+32*j,50,50,QPixmap("../red"));
                     break;
                     case 2:
-                    p.drawPixmap(300,70+30*j,50,50,QPixmap("../blue"));
+                    p.drawPixmap(275,65+32*j,50,50,QPixmap("../blue"));
                     break;
                     case 3:
-                    p.drawPixmap(300,70+30*j,50,50,QPixmap("../yellow"));
+                    p.drawPixmap(275,65+32*j,50,50,QPixmap("../yellow"));
                     break;
                     case 4:
-                    p.drawPixmap(300,70+30*j,50,50,QPixmap("../gleen"));
+                    p.drawPixmap(275,65+32*j,50,50,QPixmap("../green"));
                     break;
                 }
             }
@@ -372,16 +369,16 @@ void::fxq::paintEvent(QPaintEvent *){
             for(j=0;j<6;j++){
                 switch(win[i][j]){
                     case 1:
-                    p.drawPixmap(500-30*j,300,50,50,QPixmap("../red"));
+                    p.drawPixmap(480-32*j,285,50,50,QPixmap("../red"));
                     break;
                     case 2:
-                    p.drawPixmap(500-30*j,300,50,50,QPixmap("../blue"));
+                    p.drawPixmap(480-32*j,285,50,50,QPixmap("../blue"));
                     break;
                     case 3:
-                    p.drawPixmap(500-30*j,300,50,50,QPixmap("../yellow"));
+                    p.drawPixmap(480-32*j,285,50,50,QPixmap("../yellow"));
                     break;
                     case 4:
-                    p.drawPixmap(500-30*j,300,50,50,QPixmap("../gleen"));
+                    p.drawPixmap(480-32*j,285,50,50,QPixmap("../green"));
                     break;
         }
     }
@@ -390,16 +387,16 @@ void::fxq::paintEvent(QPaintEvent *){
             for(j=0;j<6;j++){
                 switch(win[i][j]){
                     case 1:
-                    p.drawPixmap(300,530+30*j,50,50,QPixmap("../red"));
+                    p.drawPixmap(275,480-32*j,50,50,QPixmap("../red"));
                     break;
                     case 2:
-                    p.drawPixmap(300,530+30*j,50,50,QPixmap("../blue"));
+                    p.drawPixmap(275,480-32*j,50,50,QPixmap("../blue"));
                     break;
                     case 3:
-                    p.drawPixmap(300,530+30*j,50,50,QPixmap("../yellow"));
+                    p.drawPixmap(275,480-32*j,50,50,QPixmap("../yellow"));
                     break;
                     case 4:
-                    p.drawPixmap(300,530+30*j,50,50,QPixmap("../gleen"));
+                    p.drawPixmap(275,480-32*j,50,50,QPixmap("../green"));
                     break;
                 }
             }
@@ -408,16 +405,16 @@ void::fxq::paintEvent(QPaintEvent *){
             for(j=0;j<6;j++){
                 switch(win[i][j]){
                     case 1:
-                    p.drawPixmap(70+30*j,300,50,50,QPixmap("../red"));
+                    p.drawPixmap(70+32*j,280,50,50,QPixmap("../red"));
                     break;
                     case 2:
-                    p.drawPixmap(70+30*j,300,50,50,QPixmap("../blue"));
+                    p.drawPixmap(70+32*j,280,50,50,QPixmap("../blue"));
                     break;
                     case 3:
-                    p.drawPixmap(70+30*j,300,50,50,QPixmap("../yellow"));
+                    p.drawPixmap(70+32*j,280,50,50,QPixmap("../yellow"));
                     break;
                     case 4:
-                    p.drawPixmap(70+30*j,300,50,50,QPixmap("../gleen"));
+                    p.drawPixmap(70+32*j,280,50,50,QPixmap("../green"));
                     break;
                 }
             }
@@ -427,12 +424,14 @@ void::fxq::paintEvent(QPaintEvent *){
 void fxq::mousePressEvent(QMouseEvent *e){
     flag=player%4;
     if(flag==0){
+        //qp[13][0]=1;
         qDebug()<<"red";
         if(rc==1){
             if(r1<=49)
             qp[r1][0]=0;
             if(r1>49){
-            win[0][r1-49]=0;
+            win[0][r1-50]=0;
+            qDebug()<<r1;
             qDebug()<<"ok";}
             r1=r1+sjs;
             if(r1<=49){
@@ -440,12 +439,13 @@ void fxq::mousePressEvent(QMouseEvent *e){
             update();}
             if(r1>49){
                 if(r1-49>6){
-                    win[0][61-r1]=1;
+                    win[0][60-r1]=1;
                     r1=110-r1;
+                    qDebug()<<r1;
                     update();
                 }
                 else{if(r1-49<6){
-                    win[0][r1-49]=1;
+                    win[0][r1-50]=1;
                     update();
                 }
                 if(r1-49==6){
@@ -474,16 +474,17 @@ void fxq::mousePressEvent(QMouseEvent *e){
         if(bc==1){
             if(b1>51){
                 if(b1<=62){
-                qp[b1-51][0]=0;
+                qp[b1-52][0]=0;
                 update();}
                 if(b1>62){
-                    win[1][b1-62]=0;
+                    win[1][b1-63]=0;
                     update();
                 }
                 b1=b1+sjs;
                 if(b1>62){
                     if(b1-62<6){
-                        win[1][b1-62]=2;
+                        win[1][b1-63]=2;
+                        qDebug()<<b1;
                         update();
                     }
                     if(b1-62==6){
@@ -494,18 +495,27 @@ void fxq::mousePressEvent(QMouseEvent *e){
                         update();
                     }
                     if(b1-62>6){
-                        win[1][74-r1]=2;
-                        r1=136-r1;
+
+                        win[1][73-b1]=2;
+                        b1=136-b1;
+                        qDebug()<<b1;
                         update();
                     }
                 }
                 else{
-                qp[b1-51][0]=2;
+                qp[b1-52][0]=2;
                 update();}
             }else {
             qp[b1][0]=0;
             b1=b1+sjs;
-            qp[b1][0]=2;
+                if(b1>51){
+                    qp[b1-52][0]=2;
+                    qDebug()<<b1;
+                }
+                else{
+                    qp[b1][0]=2;
+                }
+
             update();}
 
         }
@@ -523,12 +533,19 @@ void fxq::mousePressEvent(QMouseEvent *e){
     if(flag==2){
         qDebug()<<"yellow";
         if(yc==1){
-            y1=y1+sjs;
             if(y1>51){
-               qp[y1-sjs][0]=0;
+               if(y1<=75){
+                   qp[y1-52][0]=0;
+                   update();}
                 if(y1>75){
+                    win[2][y1-76]=0;
+                    update();
+                }
+                    y1=y1+sjs;
+                    if(y1>75){
                     if(y1-75<6){
-                        win[2][y1-75]=3;
+                        win[2][y1-76]=3;
+                        qDebug()<<y1;
                         update();
                     }
                     if(y1-75==6){
@@ -539,18 +556,22 @@ void fxq::mousePressEvent(QMouseEvent *e){
                         update();
                     }
                     if(y1-75>6){
-                        y1=y1-6;
-                        win[2][y1-75]=3;
+                        win[2][86-y1]=3;
+                        y1=162-y1;
                         update();
                     }
                 }
                 else{
-                    qp[y1-sjs][0]=0;
-                    qp[y1-51][0]=3;
+                    qp[y1-52][0]=3;
                     update();}
             }
             else{
-            qp[y1][0]=3;
+            qp[y1][0]=0;
+            y1=y1+sjs;
+            if(y1>51){
+                qp[y1-52][0]=3;}
+            else{
+                qp[y1][0]=3;}
             update();}
 
         }
@@ -566,40 +587,55 @@ void fxq::mousePressEvent(QMouseEvent *e){
         }
     }
     if(flag==3){
-        qDebug()<<"green";
-        if(gc==1){
-           g1=g1+sjs;
-            if(g1>51){
-                qp[g1-sjs][0]=0;
-                if(g1>88){
-                    if(g1-88<6){
-                        win[3][g1-88]=4;
-                        update();
-                    }
-                    if(g1-88==6){
-                        win[3][5]=3;
-                        gw++;
-                        gc=0;
-                        QMessageBox::information(this, "恭喜", "绿队有一架飞机到达终点", QMessageBox::Ok);
-                        update();
-                    }
-                    if(g1-88>6){
-                        g1=g1-6;
-                        win[3][g1-88]=4;
-                        update();
-                    }
-                }
-                else{
-                    qp[g1-51][0]=4;
-                    update();
-                }
-            }
-            else{
-            qp[g1-sjs][0]=0;
-            qp[g1][0]=4;
-            update();}
+         qDebug()<<"green";
+         if(gc==1){
+             if(g1>51){
+                 if(g1<=88){
+                 qp[g1-52][0]=0;
+                 update();}
+                 if(g1>88){
+                     win[3][g1-89]=0;
+                     update();
+                 }
+                 g1=g1+sjs;
+                 if(g1>88){
+                     if(g1-88<6){
+                         win[3][g1-89]=4;
+                         qDebug()<<g1;
+                         update();
+                     }
+                     if(g1-88==6){
+                         win[3][5]=4;
+                         QMessageBox::information(this, "恭喜", "绿队有一架飞机到达终点", QMessageBox::Ok);
+                         gc=0;
+                         gw++;
+                         update();
+                     }
+                     if(g1-88>6){
 
-        }
+                         win[3][99-g1]=4;
+                         g1=188-g1;
+                         qDebug()<<g1;
+                         update();
+                     }
+                 }
+                 else{
+                 qp[g1-52][0]=4;
+                 update();}
+             }else {
+             qp[g1][0]=0;
+             g1=g1+sjs;
+                 if(g1>51){
+                     qp[g1-52][0]=4;
+                     qDebug()<<g1;
+                 }
+                 else{
+                     qp[g1][0]=4;
+                 }
+
+             update();}
+
+         }
         if(gc==0){ //全部没出门
             if(sjs==6){
                     home[3][gw]=0;
