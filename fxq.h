@@ -5,6 +5,7 @@
 #include <QPaintEvent>
 #include <QPushButton>
 #include <QMouseEvent>
+#include <QTimer>
 
 class fxq : public QWidget
 {
@@ -31,10 +32,16 @@ private:
     int r2,b2,y2,g2;
     int rw,bw,yw,gw;
     int rc,bc,yc,gc;
+    int s=0;
+    int a=0;
+    int v=0;
+    int ok=0;
     QPushButton b;
+    QTimer *tim;
 
 
 public slots:
+     void handleTimeout();
 };
 
 #endif // FXQ_H
