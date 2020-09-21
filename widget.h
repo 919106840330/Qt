@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+
 #include "fxq.h"
 
 namespace Ui {
@@ -19,6 +20,10 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
+
+protected:
+     void paintEvent(QPaintEvent *event);
 
 private:
     Ui::Widget *ui;

@@ -13,150 +13,80 @@
   <property name="windowTitle">
    <string>Widget</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="2">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>45</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="0">
-    <spacer name="horizontalSpacer">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>137</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="1" column="1" rowspan="2" colspan="2">
-    <widget class="QLabel" name="label">
-     <property name="styleSheet">
-      <string notr="true">font: 26pt &quot;Agency FB&quot;;</string>
-     </property>
-     <property name="text">
-      <string>多人飞行棋</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="3" rowspan="2">
-    <spacer name="horizontalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>137</width>
-       <height>20</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="2" column="2">
-    <spacer name="verticalSpacer_2">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>45</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="3" column="1" colspan="2">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>单人游戏</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="2">
-    <spacer name="verticalSpacer_3">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>45</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="5" column="1" colspan="2">
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>双人游戏</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="2">
-    <spacer name="verticalSpacer_4">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>45</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="7" column="1" colspan="2">
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="text">
-      <string>三人游戏</string>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="2">
-    <spacer name="verticalSpacer_5">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>45</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-   <item row="9" column="1" colspan="2">
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="text">
-      <string>四人游戏</string>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="2">
-    <spacer name="verticalSpacer_6">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>45</height>
-      </size>
-     </property>
-    </spacer>
-   </item>
-  </layout>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>350</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>开始游戏</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>420</y>
+     <width>121</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>关闭游戏</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>300</y>
+     <width>51</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>飞</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>270</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>行</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>230</y>
+     <width>51</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 26pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>棋</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
